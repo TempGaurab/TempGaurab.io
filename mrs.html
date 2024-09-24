@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B4RALGB Website</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .container {
+            margin-top: 60px;
+            height: 135vh;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        #footer_c {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0%;
+        
+        outline: 0%;
+    }
+    .footer ,.footer__social,.footer__title{
+        padding: 0%;
+        margin: 0%;
+        outline: 0%;
+    }
+        p, h3, h4 {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: justify;
+        }
+        h2{
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .happylist{
+            font-family: 'Times New Roman', Times, serif;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <div class = "top">
+<!--===== HEADER =====-->
+<header class="l-header">
+    <nav class="nav bd-grid">
+        <div>
+            <a href="#" class="nav__logo">Gaurab</a>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link active-link">Home</a></li>
+                <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="index.html#skills" class="nav__link">Skills</a></li>
+                <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+                <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-menu'></i>
+        </div>
+    </nav>
+</header>
+<div class="container">
+    <br>
+    <h2><b>Movie Recommendation System</b></h>
+    <br>
+    <h3 style="text-decoration: underline;">May to August 2023:</h3>
+    <p style="text-indent: 2%;">
+        <ol class = "happylist">
+        <li style="text-indent: 2%;">I worked on Content based filtering including concepts like natural language processing, data vectorization, cosine similarity.</li>
+        <li style="text-indent: 2%;">I also made and presented a poster at Heather Bullen Research Celebration about the findings of the research.</li>
+        </ol>
+        <h5 style="text-indent: 2%;">Abstract:</h5>
+        <p style="text-indent: 4%;">This Movie Recommendations project aims to create a delightful movie-watching experience for users by providing personalized movie suggestions based on their preferences and movie attributes. The project focuses on building a prototype that extracts data from diverse movie databases. The system prepares the data for analysis using the Bag-of-Words, TF-IDF, and hashing models. It then utilizes cosine and Jaccard similarity metrics to measure movie similarity by employing preprocessing techniques. Through comparing all six combinations (bag-of-words / TF-IDF / hashing + cosine, bag-of-words / TF-IDF / hashing + Jaccard), the most effective approach is determined. This user-friendly tool significantly enhances the movie-watching experience, enabling users to explore personalized movie recommendations catering to their unique preferences.
+        </p>
+        <h5 style="text-indent: 2%;">Presentation:</h5>
+        <p>
+            <a href="assets/files/Poster_v3_Zhou.pdf" download="PresentationGaurabResearch.pdf">
+                <img src="assets/files/mrs_zhou_piohoto.png" alt="Gaurab Research Presentation File" style="border: 2px solid rgba(0, 0, 0, 0.75); width: 200px; height: 150px;">
+            </a>
+        </p>
+    </p>
+    <h3 style="text-decoration: underline;">August 2023 to present:</h3>
+    <ol class = "happylist">
+        <li style="text-indent: 2%;">Currently diving into concepts like KNN models, SVMs, Neural Networks, and other deep learning techniques.</li> 
+        <li style="text-indent: 2%;">Project funded by L.I.F.E fellowship under NKU.</li>
+    </ol>
+    <h5 style="text-indent: 2%;">Details:</h5>
+    <p style="text-indent: 2%;">Our research primarily focuses on collaborative filtering strategies such as matrix factorization, Singular Value Decomposition (SVD), K-means clustering, and K-Nearest Neighbors. These methods look for similarity in the user-movie interaction to generate accurate movie recommendations. A detailed evaluation of each method’s performance is conducted by calculating the time it takes for the model to run and the mean square error of the engine which is then used to highlight strength and limitations across different scenarios.</p>
+    <p style="text-indent: 2%;">This research also discusses the challenges of using matrix-based recommendation model such as sparsity and scalability and the ways to deal with them. For content-based filtering, our research focused on natural language processing, vectorization, and cosine similarity to capture intricate features of movies and users’ preferences. Furthermore, we studied recommendation systems using autoencoders which is a deep learning-based approach. We were able to emphasize how autoencoders contribute to making movie suggestions more accurate and diverse in comparison to the machine-learning based models. </p>
+    <p style="text-indent: 2%;"> I am currently writing a survey paper about everything we have done for this research project</p>
+    <h5 style="text-indent: 2%;">Presentation:</h5>
+        <p>
+            <a href="assets/files/p2.pdf" download="PresentationGaurabResearch.pdf">
+                <img src="assets/files/p2.jpg" alt="Gaurab Research Presentation File" style="border: 2px solid rgba(0, 0, 0, 0.75); width: 200px; height: 150px;">
+            </a>
+        </p>
+
+    <h3 style="text-decoration: underline;">References:</h3>
+    <h4>Junxiu Zhou, Ph.D.</h4>
+    <p>Assistant Professor</p>
+    <p>Office: GH 451, NKU</p>
+    <p>Phone: 859-572-6682</p>
+    <p>School of Computing and Analytics</p>
+    <p>Northern Kentucky University</p>
+    <p>Highland Heights, KY 41099</p>
+    <address style="font-family: 'Times New Roman', Times, serif; font-style: normal;">zhouj2@nku.edu</address>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+</div>
+<div id = "footer_c">
+<!--===== FOOTER =====-->
+<footer class="footer">
+    <p class="footer__title" style="text-align: center;">Gaurab</p>
+    <div class="footer__social">
+        <a href="https://www.facebook.com/gauurab/" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+        <a href="https://www.instagram.com/gauurab/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+        <a href="https://twitter.com/gaurabbaral5" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+    </div>
+    <p class="footer__copy" style="text-align: center;">&#169; Namaste. All rights reserved.</p>
+</footer>
+</div>
+</body>
+</html>

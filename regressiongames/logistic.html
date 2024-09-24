@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logistic Regression Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .form-container {
+            margin-top: 50px;
+        }
+        .form-label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        .form-input {
+            padding: 8px;
+            margin-bottom: 20px;
+            width: 200px;
+            font-size: 16px;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .go-back {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .go-back-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.go-back {
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff; /* Text color */
+    background-color: #007bff; /* Background color */
+    padding: 8px 16px; /* Adjust padding */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+.go-back:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+nav {
+        background-color: #f0f0f0;
+        padding: 20px 0; /* Add padding to top and bottom */
+    }
+    .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0; /* Remove margin-top */
+    margin-bottom: 0; /* Remove margin-bottom */
+    margin-right: calc(80px + 16px); /* Add margin-right to maintain distance from .go-back-container */
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="title">UEFA Champions League Qualification Chance Calculator</div>
+        <div class="go-back-container">
+            <a href="DATA_DICTIONARY.html" class="go-back">Data Dictionary</a>
+            <a href="mainpade.html" class="go-back">Go Back</a>
+        </div>
+    </nav>
+    <div class="form-container">
+        <form id="logisticRegressionForm">
+            <label class="form-label" for="buildUpPlayPassing" title="This value must be between 0 and 100. Involves the passing accuracy and effectiveness of a team when moving the ball forward from defense to attack.">Build Up Play Passing:</label>
+            <input class="form-input" type="number" id="buildUpPlayPassing" name="buildUpPlayPassing" required min="0" max="100">
+            
+            <label class="form-label" for="goalsScored" title="This value must be greater than 0. The total number of goals a team has scored in a given period or competition.">Goals Scored in a season:</label>
+            <input class="form-input" type="number" id="goalsScored" name="goalsScored" required min="0">
+            
+            <label class="form-label" for="goalsConceded" title="This value must be greater than 0.The total number of goals a team has allowed the opposition to score in a given period or competition.">Goals Conceded in a season:</label>
+            <input class="form-input" type="number" id="goalsConceded" name="goalsConceded" required min="0">
+        </form>
+        
+        <button class="button" type="submit" form="logisticRegressionForm">Calculate Probability for Qualifying</button>
+        <div class="result" id="probabilityText"></div>
+    </div>
+
+    <script>
+        document.getElementById("logisticRegressionForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+    
+            var formData = new FormData(event.target);
+            var buildUpPlayPassing = parseFloat(formData.get("buildUpPlayPassing"));
+            var goalsScored = parseFloat(formData.get("goalsScored"));
+            var goalsConceded = parseFloat(formData.get("goalsConceded"));
+    
+            // Logistic regression coefficients
+            var intercept = 10.73;
+            var buildUpPlayPassingCoefficient = -0.1090;
+            var goalsScoredCoefficient = 0.1612;
+            var goalsConcededCoefficient = -0.3624;
+    
+            // Calculate probability using logistic regression equation
+            var z = intercept +
+                (buildUpPlayPassingCoefficient * buildUpPlayPassing) +
+                (goalsScoredCoefficient * goalsScored) +
+                (goalsConcededCoefficient * goalsConceded);
+    
+            var probability = Math.exp(z) / (1 + Math.exp(z));
+    
+            // Display probability to the user
+            var probabilityText = document.getElementById("probabilityText");
+            probabilityText.textContent = "Probability of Qualifying for Champions League: " + (probability * 100).toFixed(2) + "%";
+        });
+    </script>
+</body>
+</html>

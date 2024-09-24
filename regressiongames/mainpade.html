@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regression Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            position: relative; /* Make the body position relative */
+        }
+        .title {
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 24px;
+            font-weight: bold;
+            width: 100%;
+            background-color: #f0f0f0;
+            padding: 10px 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            z-index: 1; /* Ensure the title is above math symbols */
+        }
+        .buttons {
+            margin-top: 100px; /* Adjust as needed */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none; /* Remove default underline */
+            transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition effect */
+            float: left; /* Make the button float */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+        }
+        .button:hover {
+            background-color: #0056b3;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+        }
+        .math-symbol {
+            position: absolute;
+            font-size: 20px;
+            color: #ccc; /* Adjust color as needed */
+            z-index: -5; /* Ensure symbols are below other content */
+        }
+   .go-back {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+        .go-back-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 100;
+}
+
+.go-back {
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff; /* Text color */
+    background-color: #007bff; /* Background color */
+    padding: 8px 16px; /* Adjust padding */
+    border-radius: 5px; /* Add rounded corners */
+}
+
+.go-back:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+nav {
+        background-color: #f0f0f0;
+        padding: 20px 0; /* Add padding to top and bottom */
+    }
+    .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: -10; /* Remove margin-top */
+    margin-bottom: 0; /* Remove margin-bottom */
+    margin-right: calc(80px + 16px); /* Add margin-right to maintain distance from .go-back-container */
+
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="go-back-container">
+            <a href="DATA_DICTIONARY.html" class="go-back">Data-Dictionary</a>
+        </div>
+    </nav>
+    <div class="title">Soccer Predictions</div>
+    <div class="buttons">
+        <p>What would you like to predict today?</p>
+        <a href="linearregression.html" class="button">Predict total points scored by the team</a>
+        <a href="logistic.html" class="button">Prediction Odds of Qualifying for Champions League</a>
+        <a href="all.html" class="button">Predict both </a>
+    </div>
+
+    <script>
+        // Function to generate random math symbols
+        function generateMathSymbols() {
+            // List of math symbols
+            var symbols = ["&Sigma;", "&mu;", "&Delta;", "&theta;", "&pi;", "&lambda;"];
+
+            // Get window dimensions
+            var windowWidth = window.innerWidth;
+            var windowHeight = window.innerHeight;
+
+            // Number of symbols to generate (adjust as needed)
+            var numSymbols = 5;
+
+            // Define left and right regions
+            var leftRegion = {
+                startX: 0,
+                endX: windowWidth * 0.4, // Adjust percentage as needed
+                startY: 0,
+                endY: windowHeight
+            };
+
+            var rightRegion = {
+                startX: windowWidth * 0.6, // Adjust percentage as needed
+                endX: windowWidth,
+                startY: 0,
+                endY: windowHeight
+            };
+
+            // Generate and position symbols on the left side
+            for (var i = 0; i < numSymbols; i++) {
+                generateSymbolInRegion(symbols, leftRegion);
+            }
+
+            // Generate and position symbols on the right side
+            for (var i = 0; i < numSymbols; i++) {
+                generateSymbolInRegion(symbols, rightRegion);
+            }
+        }
+
+        // Function to generate a symbol within a given region
+        function generateSymbolInRegion(symbols, region) {
+            // Choose a random symbol
+            var symbol = symbols[Math.floor(Math.random() * symbols.length)];
+
+            // Create a new element for the symbol
+            var symbolElement = document.createElement("div");
+            symbolElement.innerHTML = symbol;
+            symbolElement.classList.add("math-symbol");
+
+            // Generate random position within the region
+            var x = Math.random() * (region.endX - region.startX) + region.startX;
+            var y = Math.random() * (region.endY - region.startY) + region.startY;
+
+            // Set position
+            symbolElement.style.left = x + "px";
+            symbolElement.style.top = y + "px";
+
+            // Append to the body
+            document.body.appendChild(symbolElement);
+        }
+
+        // Call the function when the page loads
+        window.onload = generateMathSymbols;
+    </script>
+</body>
+</html>

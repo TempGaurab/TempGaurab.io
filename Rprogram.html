@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B4RALGB Website</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .container {
+            margin-top: 80px;
+            height: 120vh;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .column {
+            flex: 1;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        #footer_c {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0%;
+        margin: 0%;
+        outline: 0%;
+    }
+    .footer ,.footer__social, .footer__title{
+        padding: 0%;
+        margin: 0%;
+        outline: 0%;
+    }
+        p, li, h3 {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: justify;
+        }
+        .column-container{
+            display: flex;
+            width: 60%;
+            margin: auto;
+            padding: 10px;
+            justify-content: space-around;
+
+        }
+        h3{
+            text-align: center;
+            margin: 0;
+            padding: 2;
+        }
+        .column p {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <div class = "top">
+<!--===== HEADER =====-->
+<header class="l-header">
+    <nav class="nav bd-grid">
+        <div>
+            <a href="#" class="nav__logo">Gaurab</a>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link active-link">Home</a></li>
+                <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
+                <li class="nav__item"><a href="index.html#skills" class="nav__link">Skills</a></li>
+                <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+                <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="nav__toggle" id="nav-toggle">
+            <i class='bx bx-menu'></i>
+        </div>
+    </nav>
+</header>
+
+<div class="container">
+    <br>
+    <br>
+    <h3>Manchester City Games Analysis</h3>
+    <br>
+    <p>I led a collaborative research with my team to collect and analyze data on Football/Soccer games from the English Premier league. This involved:</p>
+    <ol>
+        <li>Analyzed Premier League data spanning from 1993 to 2023, encompassing table positions and goals scored. The data was collected from a reputed source which I downloaded from Google Scholar.</li>
+        <li> Utilized Pandas and Numpy to compute information on winners, runner-ups, trophies, and relegations. </li>
+        <li>Conducted Exploratory Data Analysis (EDA) to produce visual graphs using matplotlib and seaborn, accessible at: 
+            <a href = "EPL.html">link</a></li>
+    </ol>
+    <p style="align-items: center; display: flex;
+    justify-content: center;">
+        <a href="assets/files/EPL.pdf" download="EPL.pdf">
+            <embed src="assets/img/epl.jpg" type="image/jpg" width="200" height="150" style="border: 2px solid black;">
+        </a>
+    </p>
+    <br>
+    <p>Then we focused on one single team(Manchester City) and analyzed their games from 2018 to present. We did the following:</p>
+
+<ol>
+    <li>Extracting information from the Google Football/Soccer Database using Beautiful Soup.</li>
+    <li>Employing Pandas to clean the dataset thoroughly.</li>
+    <li>Strategically sampling games to eliminate bias.</li>
+    <li>Conducting a statistical analysis using the R programming language to explore the details of the dataset in depth.</li>
+    <li>Developing a sophisticated predictive linear regression model as the culmination of our efforts.</li>
+    <li>Fine-tuning the model through the strategic application of backward elimination techniques to ensure accurate forecasts of the total goals scored by Manchester City.</li>
+</ol>
+
+<p>The details of the project can be found by clicking <a href="https://github.com/Gaurab-B/Manchester_City_Linear_Regression" target="_blank">here</a>.</p>
+<div class = "column-container">
+    <div class="column">
+        <h3>Presentation</h3>
+        <p>
+            <a href="assets/files/final_data.pdf" download="PresentationManchesterCity.pdf">
+                <embed src="assets/files/final_Data.jpg" type="image/jpg" width="200" height="150">
+            </a>
+        </p>
+    </div>
+    <div class="column">
+        <h3>Final Paper</h3>
+        <p>
+            <a href="assets/files/Final_Everything_included.pdf" download="FinalPaperManchesterCity.pdf">
+                <embed src="assets/files/final_everything.jpg" type="image/jpg" width="200" height="150">
+            </a>
+        </p>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+</div>
+</div>
+</div>
+
+<div id = "footer_c">
+<!--===== FOOTER =====-->
+<footer class="footer">
+    <p class="footer__title" style="text-align: center;">Gaurab</p>
+    <div class="footer__social">
+        <a href="https://www.facebook.com/gauurab/" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+        <a href="https://www.instagram.com/gauurab/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+        <a href="https://twitter.com/gaurabbaral5" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+    </div>
+    <p class="footer__copy" style="text-align: center;">&#169; Namaste. All rights reserved.</p>
+</footer>
+</div>
+
+</body>
+</html>

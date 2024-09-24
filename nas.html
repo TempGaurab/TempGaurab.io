@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+                    .top {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .container {
+            margin-top: 80px;
+            height: 120vh;
+            width: 80%;
+            max-width: 800px;
+        }
+
+        .column {
+            flex: 1;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        #footer_c {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+        padding: 0%;
+        margin: 0%;
+        outline: 0%;
+    }
+    .footer ,.footer__social, .footer__title{
+        padding: 0%;
+        margin: 0%;
+        outline: 0%;
+    }
+        p, li, h3 {
+            font-family: 'Times New Roman', Times, serif;
+            text-align: justify;
+        }
+        .column-container{
+            display: flex;
+            width: 60%;
+            margin: auto;
+            padding: 10px;
+            justify-content: space-around;
+
+        }
+        h3{
+            text-align: center;
+            margin: 0;
+            padding: 2;
+        }
+        .column p {
+            display: inline-block;
+        }
+        </style>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>B4RALGB Website</title>
+    </head>
+    <body><!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Gaurab</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link active-link">Home</a></li>
+                        <li class="nav__item"><a href="index.html#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="index.html#skills" class="nav__link">Skills</a></li>
+                        <li class="nav__item"><a href="index.html#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="index.html#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class='bx bx-menu'></i>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <br>
+            <br>
+            <br>
+            <br>
+            <h3 style="align-items: center; display: flex;
+            justify-content: center;"> <b>North American Steels Data Analysis</b></h3>
+            <br>
+            <p>This link to this project is not shown as the proejct involved data of North American Steels which is highly confidential. We did the following analysis for the project:</p>
+            <ol>
+                <li>Merged diverse Steel datasets into a unified structure using Pandas</li>
+                <li>Implemented data cleaning tasks, including deduplication, anomaly detection, and correction using Pandas and Numpy</li>
+                <li>Addressed missing data and ensured consistency.</li>
+                <li>Developed a modularized Python application for efficient data processing.</li>
+                <li>Uploaded cleaned data to the designated database using sqlite3.</li>
+                <li>Analyzed the datasets to provide meaningful outcomes.</li>
+            </ol>
+            <p>Below are the papers we wrote and the presentation we made for the company:</p>
+            <div class = "column-container">
+                <div class="column">
+                    <h3>Presentation</h3>
+                    <p>
+                        <a href="assets/files/group1_final_project (2).pptx" download="NAS_PRESENTATION.pptx">
+                            <embed src="assets\img\Screenshot 2024-01-17 222713.png" type="image/jpg" width="200" height="150" style="border: 1px solid black;">
+                        </a>
+                    </p>
+                </div>
+                <div class="column">
+                    <h3>Final Paper</h3>
+                    <p>
+                        <a href="assets/files/group1_dsc200_final_report-1.pdf" download="NASDOCUMENT.pdf">
+                            <embed src="assets\img\Screenshot 2024-01-17 222915.png" type="image/jpg" width="200" height="150" style="border: 1px solid black;">
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </main>
+        <BR>
+            <BR>
+                <BR>
+                    <BR>
+                        <BR><BR>
+                            <BR>
+                                <BR>
+                                    <BR>
+                                        <BR>
+                                            <BR>
+                                                <BR>
+                                                    <BR>
+                                                        <BR>
+
+        <!--===== FOOTER =====-->
+        <div id = "footer_c">
+            <!--===== FOOTER =====-->
+            <footer class="footer">
+                <p class="footer__title" style="text-align: center;">Gaurab</p>
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/gauurab/" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+                    <a href="https://www.instagram.com/gauurab/" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+                    <a href="https://twitter.com/gaurabbaral5" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+                </div>
+                <p class="footer__copy" style="text-align: center;">&#169; Namaste. All rights reserved.</p>
+            </footer>
+            </div>
+
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+        <script>
+
+        </script>
+    </body>
+</html>

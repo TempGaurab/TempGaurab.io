@@ -1,0 +1,23 @@
+<main>
+            <section class="column">
+                <h2>STEM Peer Mentor:</h2>
+                <p>
+                    My journey as a STEM Peer Mentor has been a continuous path of growth and development. In this role, I provide support to my peers through mentorship and community events, contributing to academic excellence and inclusivity within the NKU STEM community. Moving forward, my commitment is to ongoing learning, refining my approach, and fostering a positive mentorship environment.
+                </p>
+            </section>
+        
+            <section class="column">
+                <h2>CS & SE Search Committee:</h2>
+                <p>
+                    As a dedicated member of the search committee for the Assistant Professor position within the School of Computing and Analytics at Northern Kentucky University, I offer a valuable student perspective to the evaluation process. Collaborating with Professor Zhou, Professor Caporusso, Professor Fox, Professor Cho, and Professor Jiang from the College of Informatics at NKU, my role as a student reviewer allows me to provide insights into the qualities that make an effective educator. I am committed to ensuring that prospective faculty members not only excel in their scholarly pursuits but also possess the ability to create an engaging and supportive learning environment. Upholding NKU's vision of a student-ready, regionally engaged university that prioritizes inclusiveness, equity, and global awareness is central to my mission.
+                </p>
+            </section>
+        
+            <section class="column">
+                <h2>COI Ambassadors:</h2>
+                <p>
+                    I am honored to serve as a College of Informatics Ambassador for NKU, passionately representing and promoting the values of our college. In this role, I actively contribute to fostering a positive and inclusive environment within the College of Informatics, striving to enhance communication and collaboration among students, faculty, and the broader community. Additionally, as the leader of a Discord workgroup, I successfully organized a skill-building program aimed at fostering community bonding while effectively managing the discord server of the organization. Together with my team of four, we hosted three engaging virtual social events, efficiently delegating tasks to handle our weekly duties.
+                </p>
+            </section>
+        </main>
+        
